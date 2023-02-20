@@ -1,31 +1,20 @@
 import React from 'react';
-import Header from '../components/Header';
-// import Footer from '../components/Footer';
+import { Container, Row, Col } from 'react-bootstrap';
 
-import {
-    // BrowserRouter,
-    // Routes,
-    // Route,
-    Link,
-  //  Outlet,
-  } from "react-router-dom";
-
-function About() {
+  function About() {
     return (
-      <div>
-        <Header />
-
-      <section>
-        <h1>About Me</h1>
-        <p>
-            Hi, it's me.
-        </p>
-        <Link to="/">Return Home</Link>
-      </section>
-
-      {/* <Footer /> */}
-    </div>
+      <div id="about">
+        <Container>
+          <Row>
+            <Col>
+              <h1 className="text-center">About Me</h1>
+              <p className="text-center">
+                Hi, it's me.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     );
   }
-
   export default About;
