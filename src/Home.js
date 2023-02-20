@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import {
   BrowserRouter,
   Routes,
@@ -8,70 +8,42 @@ import {
 //  Outlet,
 } from "react-router-dom";
 
-import Homepage from '.';
-import About from './components/pages/About';
-import Portfolio from './components/pages/Portfolio'; // projects component within portfolio
-import Contact from './components/pages/Contact';
+import About from './pages/About';
+// import Portfolio from './components/pages/Portfolio'; // projects component within portfolio
+// import Contact from './components/pages/Contact';
 
 import Header from './components/Header'; // navigation component within header component
 import Footer from './components/Footer';
 
+// function only for establishing routes/paths(urls)
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='*' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/contact' element={<Contact />} />
+        {/* <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/contact' element={<Contact />} /> */}
       </Routes>
     </BrowserRouter>
   );
 }
 
+// homepage function
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Link to="/about">About me</Link>
-      </header>
+    <div>
+      <Header />
+
+      <div className="Home">
+          <p>
+            UNDER CONSTRUCTION!
+          </p>
+          <Link to="/about">About me</Link>
+      </div>
     </div>
   );
 }
 
-function About() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is the about page
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <br></br>
-        <Link to="/">Home Page</Link>
 
-      </header>
-    </div>
-  );
-}
 export default App;
