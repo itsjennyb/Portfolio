@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-// import './App.css';
+import React, { useState, useEffect } from 'react';
+import './Home.css';
 import {
   BrowserRouter,
   Routes,
@@ -8,8 +8,11 @@ import {
 //  Outlet,
 } from "react-router-dom";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'react-bootstrap/Image'
+
 import About from './pages/About';
-// import Portfolio from './components/pages/Portfolio'; // projects component within portfolio
+import Portfolio from './pages/Portfolio'; // projects component within portfolio
 // import Contact from './components/pages/Contact';
 
 import Header from './components/Header'; // navigation component within header component
@@ -32,15 +35,49 @@ function App() {
 // homepage function
 function Home() {
   return (
-    <div>
+    <div id='home'>
       <Header />
+      <LandingImage />
 
-      <div className="Home">
-          <p>
-            UNDER CONSTRUCTION!
-          </p>
-          <Link to="/about">About me</Link>
+      <About />
+      <Portfolio />
+      {/* <Contact /> */}
+
+      <Footer />
       </div>
+  );
+}
+
+
+// ===========================================================
+
+function LandingImage() {
+  const [text, setText] = useState('');
+
+  useEffect(() => {
+    const textArray = ['is it me you\'re looking for?'];
+    let currentIndex = 0;
+    let currentText = '';
+
+    const intervalId = setInterval(() => {
+      if (currentIndex >= textArray.length) {
+        clearInterval(intervalId);
+      }
+
+      currentText = textArray[currentIndex];
+      setText(currentText.slice(0, text.length + 1));
+
+      if (text.length === currentText.length) {
+        clearInterval(intervalId);
+      }
+    }, 100);
+
+    return () => clearInterval(intervalId);
+  }, [text]);
+
+  return (
+    <div className="landing-image">
+      <h1 className="landing-text">{text}</h1>
     </div>
   );
 }
