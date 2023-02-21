@@ -48,10 +48,40 @@ function Portfolio() {
     }    
 ];
 
+// =========================================================
+
+const styles = {
+    container: {
+      backgroundColor: 'black',
+      color: 'white',
+      padding: '20px',
+    },
+    card: {
+        width: "75%",
+        height: 'auto',
+        margin: "auto",
+        filter: "grayscale(100%)",
+        transition: "filter 0.5s ease",
+        border: '1px solid black'
+      },
+      cardHover: {
+        filter: "grayscale(0%)",
+      },
+      buttonContainer: { 
+        padding: '',
+        margin: ''
+      },
+      title: {
+        textAlign: 'center',
+        margin: '0 auto',
+      }
+};
+
 return (
-    <Container>
+    <div id='portfolio' className='bg-black'>
+    <Container style={{ padding: '20px 0' }}>
       <Row className="justify-content-center">
-        <Col xs={12} className="text-center mb-5">
+        <Col xs={12} className="text-center mb-5 text-white">
           <h1>My Portfolio</h1>
         </Col>
       </Row>
@@ -62,12 +92,14 @@ return (
               name={project.name} 
               image={project.image} 
               githubLink={project.githubLink} 
-              deployLink={project.deployLink} 
+              deployLink={project.deployLink}
+              styles={styles} 
             />
           </Col>
         ))}
       </Row>
     </Container>
+    </div>
   );
   
 }

@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState }from 'react';
 import { Card, Button } from 'react-bootstrap';
 
-function Project({ name, image, githubLink, deployLink }) {
-  return (
-    <Card>
-      <Card.Img variant="top" src={image} alt={name} />
+function Projects({ name, image, githubLink, deployLink, styles }) {
+    const [hover, setHover] = useState(false);
+
+    return (
+    <Card style={hover ? { ...styles.card, ...styles.cardHover } : styles.card}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}>
+      <Card.Img variant="top" src={image} alt={name} style={styles.image}/>
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <div className="d-flex justify-content-center">
-          <Button href={githubLink} variant="primary" className="me-3">
+        <Card.Title style={styles.title}>{name}</Card.Title>
+        <div style={styles.buttonContainer} className="d-flex justify-content-center">
+          <Button href={githubLink} variant="primary" className="me-3" style={styles.button}>
             GitHub
           </Button>
-          <Button href={deployLink} variant="secondary">
+          <Button href={deployLink} variant="secondary" style={styles.button}>
             Deployed Page
           </Button>
         </div>
@@ -20,4 +24,4 @@ function Project({ name, image, githubLink, deployLink }) {
   );
 }
 
-export default Project;
+export default Projects;
