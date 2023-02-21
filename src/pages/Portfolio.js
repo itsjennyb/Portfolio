@@ -1,27 +1,52 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Projects from '../components/Projects';
 
+import busybeeImg from '../images/busybee.png';
+import localfoodieImg from '../images/localfoodie.png';
+import techblogImg from '../images/techblog.png';
+import texteditorImg from '../images/texteditor.png';
+import ecommbeImg from '../images/ecommbe.png';
+import readmegenImg from '../images/readmegen.png';
+
 function Portfolio() {
   const projects = [
     {
-      name: 'Project 1',
-      image: '/path/to/image1.jpg',
-      githubLink: 'https://github.com/myusername/project1',
-      deployLink: 'https://project1.com'
+        name: 'Busy Bee',
+        image: {busybeeImg},
+        githubLink: 'https://github.com/itsjennyb/Busy-Bee',
+        deployLink: 'https://lit-beach-45684.herokuapp.com/'
     },
     {
-      name: 'Project 2',
-      image: '/path/to/image2.jpg',
-      githubLink: 'https://github.com/myusername/project2',
-      deployLink: 'https://project2.com'
+        name: 'The Local Foodie',
+        image: {localfoodieImg},
+        githubLink: 'https://github.com/itsjennyb/The-Local-Foodie',
+        deployLink: 'https://itsjennyb.github.io/The-Local-Foodie/'
     },
     {
-      name: 'Project 3',
-      image: '/path/to/image3.jpg',
-      githubLink: 'https://github.com/myusername/project3',
-      deployLink: 'https://project3.com'
+        name: 'Tech Blog',
+        image: {techblogImg},
+        githubLink: 'https://github.com/itsjennyb/Tech-Blog',
+        deployLink: 'https://jens-tech-blog.herokuapp.com/'
     },
-  ];
+    {
+        name: 'Text Editor (PWA)',
+        image: {texteditorImg},
+        githubLink: 'https://github.com/itsjennyb/Text-Editor',
+        deployLink: ''
+    },
+    {
+        name: 'E-Commerce (BackEnd)',
+        image: {ecommbeImg},
+        githubLink: 'https://github.com/itsjennyb/E-Comm-BackEnd',
+        deployLink: ''
+    },
+    {
+        name: 'README Generator',
+        image: {readmegenImg},
+        githubLink: 'https://github.com/itsjennyb/README-Generator',
+        deployLink: ''
+    }    
+];
 
   return (
     <Container>
