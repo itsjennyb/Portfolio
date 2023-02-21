@@ -24,18 +24,4 @@ function Navigation() {
   );
 }
 
-// function Navigation() {
-//   return (
-//     <div className="navContainer">
-//         <div className="navContent">
-//             <Link to="/about">About</Link>
-//             <Link to="/portfolio">Portfolio</Link>
-//             <Link to="/contact">Contact</Link>
-//             <span>{/* github */}</span>
-//             <span>{/* linkedin */}</span>
-//         </div>
-//     </div>
-//   );
-// }
-
 export default Navigation;
