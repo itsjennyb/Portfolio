@@ -12,44 +12,49 @@ function Portfolio() {
   const projects = [
     {
         name: 'Busy Bee',
-        image: {busybeeImg},
+        image: busybeeImg,
         githubLink: 'https://github.com/itsjennyb/Busy-Bee',
         deployLink: 'https://lit-beach-45684.herokuapp.com/'
     },
     {
         name: 'The Local Foodie',
-        image: {localfoodieImg},
+        image: localfoodieImg,
         githubLink: 'https://github.com/itsjennyb/The-Local-Foodie',
         deployLink: 'https://itsjennyb.github.io/The-Local-Foodie/'
     },
     {
         name: 'Tech Blog',
-        image: {techblogImg},
+        image: techblogImg,
         githubLink: 'https://github.com/itsjennyb/Tech-Blog',
         deployLink: 'https://jens-tech-blog.herokuapp.com/'
     },
     {
         name: 'Text Editor (PWA)',
-        image: {texteditorImg},
+        image: texteditorImg,
         githubLink: 'https://github.com/itsjennyb/Text-Editor',
         deployLink: ''
     },
     {
         name: 'E-Commerce (BackEnd)',
-        image: {ecommbeImg},
+        image: ecommbeImg,
         githubLink: 'https://github.com/itsjennyb/E-Comm-BackEnd',
         deployLink: ''
     },
     {
         name: 'README Generator',
-        image: {readmegenImg},
+        image: readmegenImg,
         githubLink: 'https://github.com/itsjennyb/README-Generator',
         deployLink: ''
     }    
 ];
 
-  return (
+return (
     <Container>
+      <Row className="justify-content-center">
+        <Col xs={12} className="text-center mb-5">
+          <h1>My Portfolio</h1>
+        </Col>
+      </Row>
       <Row className="justify-content-center">
         {projects.map((project, index) => (
           <Col xs={12} md={6} lg={4} key={index} className="my-3">
@@ -64,6 +69,7 @@ function Portfolio() {
       </Row>
     </Container>
   );
+  
 }
 
 export default Portfolio;
