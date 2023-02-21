@@ -1,8 +1,8 @@
 import React from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+// import { Route, Routes, Link } from 'react-router-dom';
 
-import Home from '../Home';
-import About from '../pages/About';
+// import Home from '../Home';
+// import About from '../pages/About';
 // import Portfolio from './pages/Portfolio';
 // import Contact from './pages/Contact';
 
@@ -40,7 +40,7 @@ function Header() {
             <div style={styles.headerAndNavContent} className="headerAndNavContent">
                 <div style={styles.headerContainer} className="headerContainer">
                     <div style={styles.headerContent} className="headerContent">
-                        <h3 style={{color: 'white'}} className="siteName">it's jb</h3>
+                        <h3 style={{color: 'white'}} className="siteName">jennifer blacutt</h3>
                     </div>
                 </div>
                 <div style={styles.navContainer} className="navContainer">
