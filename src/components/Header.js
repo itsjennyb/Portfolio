@@ -1,11 +1,4 @@
 import React from 'react';
-// import { Route, Routes, Link } from 'react-router-dom';
-
-// import Home from '../Home';
-// import About from '../pages/About';
-// import Portfolio from './pages/Portfolio';
-// import Contact from './pages/Contact';
-
 import Navigation from './Navigation';
 
 const styles = {
@@ -15,16 +8,16 @@ const styles = {
       alignItems: 'center',
       height: '60px',
       backgroundColor: 'black',
-      padding: '0 20px',
+      padding: '0 2%',
     },
     headerContainer: {
       display: 'flex',
       alignItems: 'center',
     },
     headerContent: {
-      maxWidth: '1200px',
+      maxWidth: '60rem',
       margin: '0 auto',
-      fontSize: 18
+      fontSize: '1.125rem'
     },
     navContainer: {
       display: 'flex',
