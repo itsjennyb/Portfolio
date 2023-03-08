@@ -37,6 +37,9 @@
   }
 }
 
+.App-body {
+  background-color: black;
+}
 
 .landing-image {
   background-color: black;
