@@ -1,45 +1,34 @@
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-// import Header from '../components/Header';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import About from '../pages/About';
 import Portfolio from '../pages/Portfolio';
-import Resume from '../pages/Resume';
 import Contact from '../pages/Contact';
-
+import Resume from '../pages/Resume';
 
 function Home() {
-    const [currentPage, setCurrentPage] = useState('About');
+  const [selectedComponent, setSelectedComponent] = useState('about');
 
-    const renderPage = () => {
-        if (currentPage === 'About') {
-            return <About />
-        } else if (currentPage === 'Portfolio') {
-            return <Portfolio />
-        } else if (currentPage === 'Resume') {
-            return <Resume />
-        } else {
-            return <Contact />
-        }
-    }
+  let componentToRender;
 
-    const changeContentHandler = (page) => setCurrentPage(page)
+  if (selectedComponent === 'about') {
+    componentToRender = <About />;
+  } else if (selectedComponent === 'portfolio') {
+    componentToRender = <Portfolio />;
+  } else if (selectedComponent === 'contact') {
+    componentToRender = <Contact />;
+  } else if (selectedComponent === 'resume') {
+    componentToRender = <Resume />;
+  }
 
-    const styles = {
-        main: {
-            minHeight: '90vh',
-        }
-    }
 
-    return (
-        <div className="relative">
-            <Navigation currentPage={currentPage} onChange={changeContentHandler} />
-            <div style={styles.main} className="h-full w-full inset-0 bg-pattern-light grid place-items-center">
-                {renderPage()}
-            </div>
-            <Footer />
-        </div>
-    )
+  return (
+    <div id='home'>
+      <Header onNavigationClick={setSelectedComponent} />
+      {componentToRender}
+      <Footer />
+    </div>
+  );
 }
 
 export default Home;
