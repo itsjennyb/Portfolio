@@ -1,5 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import Projects from '../components/Projects';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 import busybeeImg from '../images/busybee.png';
 import localfoodieImg from '../images/localfoodie.png';
@@ -52,8 +54,8 @@ function Portfolio() {
 
 const styles = {
     container: {
-      backgroundColor: 'black',
-      color: 'white',
+      backgroundColor: 'white',
+      color: 'black',
       padding: '20px',
     },
     card: {
@@ -61,7 +63,7 @@ const styles = {
         height: 'auto',
         margin: "auto",
         filter: "grayscale(100%)",
-        transition: "filter 0.5s ease",
+        transition: "filter 0.3s ease",
         border: '1px solid black'
       },
       cardHover: {
@@ -73,12 +75,13 @@ const styles = {
       },
       title: {
         textAlign: 'center',
-        margin: '0 auto',
+        margin: '10px auto',
       }
 };
 
 return (
     <div id='portfolio' className='bg-black'>
+    <Header />
     <Container style={{ padding: '20px 0' }}>
       <Row className="justify-content-center">
         <Col xs={12} className="text-center mb-5 text-white">
@@ -99,6 +102,7 @@ return (
         ))}
       </Row>
     </Container>
+    <Footer />
     </div>
   );
   
