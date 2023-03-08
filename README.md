@@ -7,12 +7,14 @@
   
   Technologies used: React, JavaScript, Bootstrap
 
+  View my portfolio [here](https://itsjennyb.github.io/JB-Portfolio).
+
 ![preview](./src/images/portfolio.png)
 
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Tests](#tests)
+  - [Start](#start)
   - [Contributors](#contributors)
   - [Contact/Questions](#contact/questions)
   - [License](#license)
@@ -23,8 +25,8 @@
   ## Usage
   Uses for this app: For portfolios and other single-page applications.
 
-  ## Tests
-  To test, run the following command: `npm start`
+  ## Start
+  To start from a cloned repo, run the following command: `npm start`
 
   ## Contributors
   Jennifer Blacutt
