@@ -8,9 +8,9 @@ function Projects({ name, image, githubLink, deployLink, styles }) {
     <Card style={hover ? { ...styles.card, ...styles.cardHover } : styles.card}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}>
-      <Card.Img variant="top" src={image} alt={name} style={styles.image}/>
+      <Card.Title variant="top" style={styles.title}>{name}</Card.Title>
+      <Card.Img src={image} alt={name} style={styles.image}/>
       <Card.Body>
-        <Card.Title style={styles.title}>{name}</Card.Title>
         <div style={styles.buttonContainer} className="d-flex justify-content-center">
           <Button href={githubLink} variant="primary" className="me-3" style={styles.button}>
             GitHub
