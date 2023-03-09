@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './components/Home';
@@ -14,15 +14,15 @@ import Contact from './pages/Contact';
 // function only for establishing routes/paths(urls)
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path='*' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/portfolio' element={<Portfolio />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/resume' element={<Resume />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
