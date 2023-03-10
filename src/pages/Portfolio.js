@@ -8,10 +8,16 @@ import localfoodieImg from '../images/localfoodie.png';
 import techblogImg from '../images/techblog.png';
 import texteditorImg from '../images/texteditor.png';
 import ecommbeImg from '../images/ecommbe.png';
-import readmegenImg from '../images/readmegen.png';
+import ghostbustersImg from '../images/ghostbusters.png';
 
 function Portfolio() {
   const projects = [
+    {
+      name: 'Ghostbusters',
+      image: ghostbustersImg,
+      githubLink: 'https://github.com/itsjennyb/Ghostbusters',
+      deployLink: 'https://agile-peak-65135.herokuapp.com/'
+    },
     {
         name: 'Busy Bee',
         image: busybeeImg,
@@ -41,13 +47,7 @@ function Portfolio() {
         image: ecommbeImg,
         githubLink: 'https://github.com/itsjennyb/E-Comm-BackEnd',
         deployLink: ''
-    },
-    {
-        name: 'README Generator',
-        image: readmegenImg,
-        githubLink: 'https://github.com/itsjennyb/README-Generator',
-        deployLink: ''
-    }    
+    }  
 ];
 
 // =========================================================
