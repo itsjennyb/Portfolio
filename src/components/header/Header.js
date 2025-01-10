@@ -8,9 +8,10 @@ const Header = () => {
     <header className='header'>
       <nav className='nav container'>
         <a href='index.html' className='nav_logo'>Blacutt</a>
+
         <div className='nav_menu'>
           <ul className='nav_list grid'>
-            
+
             <li className='nav_item'>
               <a href='#home' className='nav_link'>
                 <i className='uil uil-estate nav_icon'></i> Home
@@ -48,8 +49,14 @@ const Header = () => {
             </li>
 
           </ul>
+
+          <i class='uil uil-times nav_close'></i>
         </div>
-      
+
+        <div className='nav_toggle'>
+          <i class='uil uil-apps'></i>
+        </div>
+
       </nav>
     </header>
   )
