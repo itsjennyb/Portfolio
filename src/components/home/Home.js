@@ -11,6 +11,8 @@ const Home = () => {
                     <Social />
 
                     <div className='home_img'></div>
+
+                    <Data />
                 </div>
         </section>
     )
