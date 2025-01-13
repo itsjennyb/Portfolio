@@ -30,7 +30,9 @@ const Backend = () => {
                         <span className='skills_level'>Basic</span>
                     </div>
                 </div>
+            </div>
 
+            <div className='skills_group'>
                 <div className='skills_data'>
                     <i class='bx bx-badge-check'></i>
                     <div>
@@ -51,14 +53,6 @@ const Backend = () => {
                     <i class='bx bx-badge-check'></i>
                     <div>
                         <h3 className='skills_name'>GraphQL</h3>
-                        <span className='skills_level'>Basic</span>
-                    </div>
-                </div>
-
-                <div className='skills_data'>
-                    <i class='bx bx-badge-check'></i>
-                    <div>
-                        <h3 className='skills_name'>Authentication</h3>
                         <span className='skills_level'>Basic</span>
                     </div>
                 </div>
