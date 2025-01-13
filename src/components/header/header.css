@@ -24,6 +24,7 @@
 .nav_list {
     display: flex;
     column-gap: 2rem;
+    list-style-type: none; /*removes bullet pt style*/
 }
 
 .nav_link {
