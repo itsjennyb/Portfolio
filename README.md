@@ -9,8 +9,6 @@
 
   View my portfolio [here](https://itsjennyb.github.io/JB-Portfolio).
 
-![preview](./src/images/portfolio.png)
-
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
