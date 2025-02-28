@@ -11,7 +11,7 @@
 }
 
 .about_info {
-    grid-template-columns: repeat(3, 140px);
+    grid-template-columns: repeat(2, 140px);
     gap: 0.5rem;
     margin-bottom: var(--mb-2);
 }
