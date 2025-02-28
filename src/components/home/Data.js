@@ -57,7 +57,8 @@ const Data = () => {
 
             </h1>
             <h3 className='home_subtitle'>Web Developer</h3>
-            <p className='home_description'>Add description here</p>
+            <p className='home_description'>I code.<br />
+            Sometimes it even works. </p>
 
             <a href='#contact' className='button button--flex'>
                 Say hello
