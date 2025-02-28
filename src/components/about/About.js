@@ -8,16 +8,17 @@ const About = () => {
     return (
         <section className='about section' id='about'>
             <h2 className = 'section_title'>About Me</h2>
-                <span className='section_subtitle'>My introduction</span>
+                <span className='section_subtitle'>///</span>
 
                 <div className='about_container container grid'>
                     <img src={AboutImg} alt='' className='about_img' />
 
                     <div className='about_data'>
-                        <Info />
+                        {/* <Info /> */}
 
                         <p className='about_description'>
-                            STUFF ABOUT MEEEEEEEEEEE
+                            Whether it's front-end, back-end, or somewhere inbetween,
+                            I try to make things work even if I don't always know how at first.
                         </p>
 
                         <a download='' href={CV} className = 'button button--flex'>Download CV
